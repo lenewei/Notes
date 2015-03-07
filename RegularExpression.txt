@@ -1,0 +1,55 @@
+namespace\s\s(?<whatever>\w)
+namespace ${whatever}
+
+I(?<type>\w+)Field
+${type}Field
+
+SetFieldValue\("(?<control>\w+)"\s*,\s*(?<value>.+)\);
+${control}.Value = ${value};
+
+SetFieldTag\("(?<control>\w+)"\s*,\s*(?<value>.+)\);
+${control}.Tag = ${value};
+
+GetFieldValue\("(?<control>\w+)"\)
+${control}.Value
+
+GetFieldTag\("(?<control>\w+)"\)
+${control}.Tag
+
+Client.Dealing.(?<deal>\w+)Deal
+Client.Dealing.${deal}.${deal}Deal
+
+Let Property to Set Sub
+
+Instrument_Visible(COLLATERAL_SIDE) = False
+To 
+SetInstrument_Visible(COLLATERAL_SIDE) = False
+
+(?<interface>\w+)_Visible\((?<first>.+)\) = (?<second>\w+)
+To
+Set${interface}_Visible ${first}, ${second}
+
+
+public string (?<TheKey>.+) { get; private set; }
+public string ${TheKey} { get { return Underlying. ${TheKey}; } }
+
+VB6 Form to Class
+Begin VB.Form frmBankflowManImp 
+
+Begin (?<type>.+) (?<variable>\w+)
+Private WithEvents ${variable} As ${type}
+
+Delete all the others
+(?<type>.+)=(?<variable>.+)\r\n
+BeginProperty .+\r\n
+EndProperty\r\n
+End\r\n
+To blank
+
+vParams\[\w+\] =(?<content>.+);
+vParams.AppendLine(${content});
+
+Number related
+Match integers and decimals
+
+ \b[0-9]*\.*[0-9]+\b
